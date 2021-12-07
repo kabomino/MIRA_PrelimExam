@@ -1,0 +1,12 @@
+---
+- hosts: ubuntu
+  roles:
+    - python
+    - java
+    - role: change-motd
+      vars:
+        motd: "Ansible Managed by MIRA"
+    - role: create-user
+      vars:
+        username: "qnkbmira"
+        name: "Noveloraine Kate Mira"
